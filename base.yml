@@ -1,0 +1,90 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - trigger: ";date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d %H:%M"
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  # Shortcut for console.log
+  - trigger: ";cl"
+    replace: "console.log("
+
+  # Shorcut for ip address in Terminal
+  - trigger: ";ip"
+    replace: "ipconfig getifaddr en1"
+
+  # Shortcut for JavaScript
+  - trigger: ";js"
+    replace: "JavaScript"
+
+  # Shortcut for console.table
+  - trigger: ";ct"
+    replace: "console.table("
+
+  # Shortcuts for python
+  - trigger: ";p3"
+    replace: "python3"
+
+  - trigger: ";git"
+    replace: "python3 /Users/remy/python/personal/git-automations/git.py"
+
+  # Shortcuts for Sims 4
+
+  - trigger: ";cc"
+    replace: "testingcheats on"
+  
+  - trigger: ";bb"
+    replace: "bb.moveobjects"
+  
+  - trigger: ";cas"
+    replace: "cas.fulleditmode"
+
+  - trigger: ";skl"
+    replace: "stats.set_skill_level Major_"
+
+  - trigger: ";motive"
+    replace: "fillmotive motive_"
+
+  - trigger: ";maxmotives"
+    replace: "sims.fill_all_commodities"
+
+  - trigger: ";trait"
+    replace: "traits.equip_trait "
+
+  # Shortcut for LinkedIn
+  - trigger: ";linkedin"
+    replace: "https://www.linkedin.com/in/remydrain"
+
+  - trigger: ";hex"
+    replace: "⬢"
