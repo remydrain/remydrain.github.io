@@ -2459,6 +2459,8 @@ input, select, textarea {
 
 		.icon.alt:hover {
 			text-shadow: 2px 0 0 #ffffff, -2px 0 0 #ffffff, 0 2px 0 #ffffff, 0 -3px 0 var(--accent);
+			color: var(--btn) !important;
+
 		}
 
 			.icon.alt:before {
